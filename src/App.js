@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Navbar from './components/Navbar';
+import Contact from './components/Contact';
+import Login from './components/Login';
 
 function App() {
 	return (
@@ -10,9 +12,12 @@ function App() {
 			<Router>
 				<Navbar />
 				<Switch>
-					<Route exact path="/" components={Home} />
-					<Route path="/about" components={About} />
+					<Route exact path="/" component={Home} />
+					<Route path="/about" component={About} />
+					<Route path="/contact" component={Contact} />
+					<Route path="/login" component={Login} />
 				</Switch>
+				{/* <Login /> */}
 			</Router>
 		</div>
 	);
